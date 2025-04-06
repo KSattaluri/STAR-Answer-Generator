@@ -1,0 +1,10 @@
+# Core dependencies
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# LLM API clients
+google-generativeai==0.3.2
+anthropic==0.8.1
+
+# Utilities
+tqdm==4.66.1

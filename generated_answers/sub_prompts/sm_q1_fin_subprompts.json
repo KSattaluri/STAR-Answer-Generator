@@ -1,0 +1,20 @@
+[
+  {
+    "prompt_id": "SM_scenario_1",
+    "prompt_number": 1,
+    "total_prompts": 1,
+    "core_interview_question": "Talk about a time when you helped a team overcome obstacles to deliver successfully.",
+    "llm_instructions": "Generate a single, detailed, realistic STAR-format answer based strictly on the comprehensive Main Context Prompt provided separately. Ensure the answer fully embodies the `Scrum Master (SM)` persona, uses the `Finance / Financial Services` context, meets all requirements outlined in the Main Context Prompt, and specifically incorporates the focus points detailed in this JSON object.",
+    "skill_focus": [
+      "Servant Leadership & Impediment Management - Proactive Impediment Removal",
+      "Servant Leadership & Impediment Management - Organizational Navigation for Resolution"
+    ],
+    "soft_skill_highlight": "Influence Without Authority",
+    "scenario_theme_hint": "The obstacle should be an unexpected, critical dependency on a slow-moving, external infrastructure team (e.g., firewall configuration for a new API endpoint) that threatened the Sprint Goal related to a regulatory reporting feature (e.g., MiFID II or CCAR).",
+    "tech_context_hint": "The team was developing Java/Spring Boot microservices needing secure external connectivity via REST APIs for data ingestion, deployed potentially on AWS or an internal cloud platform.",
+    "stakeholder_interaction_hint": "Detail interactions with your Product Owner, the team's Technical Lead, and the Manager/Lead of the external Infrastructure & Cloud Engineering team (specifically network/security).",
+    "org_context_hint": "Frame this within a mid-Sprint timeframe where the impediment surfaced unexpectedly, impacting a high-priority feature committed for the current PI and crucial for the Regulatory Reporting business unit to meet an upcoming deadline.",
+    "additional_considerations": "Emphasize how you balanced protecting the team's focus (shielding them from excessive meetings/chasing) with the need to actively pursue impediment resolution across organizational boundaries using servant leadership principles and building rapport rather than escalating prematurely.",
+    "final_output_instructions": "Final Output: A single, comprehensive STAR answer reflecting these specific constraints and all general requirements from the Main Context Prompt. The entire answer MUST be formatted using Markdown (headings, lists, bolding etc.)."
+  }
+]

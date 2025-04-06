@@ -1,0 +1,25 @@
+[CONVERSATIONAL_ANSWER]
+Sure, I can share an experience from my time as a Product Manager at [Previous Bank Name], where I was looking after our retail banking mobile app.
+
+We noticed something concerning in Q3 last year. While plenty of users were starting the new checking account application on the app, our final conversion rate – getting them all the way to a funded account – was lagging about 15% behind our target. This end-to-end conversion was our main KPI. When I dug into the funnel data using Amplitude, it became clear there was a major bottleneck: the 'Identity Verification' step. We were seeing a huge 35% drop-off right there, much worse than industry standards or even our own web platform. It was a clear friction point I needed to address urgently.
+
+So, my main job was to figure out *why* people were dropping off during mobile ID verification and get that step's completion rate up, aiming to boost the overall conversion by at least 10% in Q4. This meant leading a cross-functional team – data analysts, UX designers, mobile engineers – to really get to the bottom of it, test solutions, and roll out the fix.
+
+I kicked things off by initiating a deep dive with our data analyst. We sliced the Amplitude data every way possible – device, OS, time of day – but the real "aha!" moments came when I personally reviewed session recordings using FullStory. I could see users physically struggling to align their IDs, getting confused by error messages, and just giving up after multiple attempts. Simultaneously, I wrote some SQL queries against our backend logs. This was crucial because it uncovered a high volume of "poor image quality" errors and also intermittent timeouts from our third-party ID verification vendor, especially during peak hours.
+
+Based on both the quantitative data and those qualitative session insights, I formulated two key hypotheses with the team: first, that improving the ID capture UI with better guidance and maybe auto-capture would cut down image errors; second, that clearer feedback during the vendor API call could reduce abandonment from perceived slowness. **My decision here was critical:** given the prevalence of the "poor image quality" errors revealed by my SQL investigation, I prioritized testing the UI improvements (Hypothesis 1) first as the most direct path to impact.
+
+I worked closely with UX to design a new interface with an overlay guide, real-time edge detection, and auto-capture. I then collaborated with engineering to scope it for iOS and Android and set up an A/B test using Firebase, splitting traffic 50/50. Our primary metric was the ID verification step completion rate, but we also tracked overall conversion, time on step, attempts, and those specific error codes via SQL. To keep everyone aligned during the three-week test, I instituted brief daily check-ins with engineering, focusing just on test performance and any blockers. We used shared Amplitude and Firebase dashboards for transparency.
+
+The results were fantastic and statistically significant. The new UI led to an **18% increase in ID verification completion** and reduced those "poor image quality" errors by 30%. Most importantly, this translated directly into an **11% uplift in our overall end-to-end account opening conversion rate** for users seeing the new design. Based on this clear data, **I made the call to roll out the new UI to 100% of our mobile users.** I then presented these findings and the decision to senior leadership, including the Head of Retail Banking, tailoring the message to focus on the direct impact on our core acquisition KPI.
+
+This experience really drove home the importance of blending quantitative data with qualitative user observation to pinpoint the *real* problem. It also showed how crucial clear communication and a structured, data-driven testing approach are in a regulated environment like finance. It definitely influenced how I approach critical funnels now, ensuring robust instrumentation is in place from day one.
+
+[METADATA]
+Keywords: Mobile Banking, Account Opening, Conversion Rate Optimization (CRO), Identity Verification (IDV), A/B Testing, Product Management, Financial Services, User Experience (UX)
+Primary Skills: Data Analysis (Amplitude, SQL), A/B Testing, Cross-functional Leadership, Stakeholder Communication, Product Strategy
+Seniority Level: Mid/Senior
+Situation Category: Funnel Optimization / Problem Solving
+Key Lessons: Combining quantitative & qualitative data provides deeper insights; Rigorous A/B testing validates solutions in critical financial flows.
+Challenges Overcome: High user drop-off rate, diagnosing technical vs. UX issues, coordinating cross-functional testing.
+Leadership Moments: Initiating deep-dive analysis beyond surface metrics; Prioritizing hypotheses based on data; Making the final data-driven rollout decision.

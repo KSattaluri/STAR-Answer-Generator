@@ -1,0 +1,31 @@
+# Situation
+
+In my role as Scrum Master for a team developing critical Regulatory Reporting solutions within a major financial institution, we were mid-Sprint, working towards a high-priority Program Increment (PI) objective. The objective involved delivering a new microservice, built using Java and Spring Boot deployed on our internal cloud platform, to handle specific data ingestion required for MiFID II transaction reporting. The Sprint Goal was focused on establishing connectivity to a third-party market data provider via a REST API and processing the initial data feed. This feature was absolutely crucial for the Regulatory Reporting business unit to meet an impending compliance deadline. Unexpectedly, around day four of the two-week Sprint, the team discovered that the necessary firewall rules to allow our microservice egress connectivity to the external API endpoint had not been configured. This dependency on the central Infrastructure & Cloud Engineering team (specifically the Network Security group) hadn't been flagged as high-risk initially, as standard lead times were assumed, but it now presented a critical blocker.
+
+# Task
+
+My primary task as Scrum Master was to urgently resolve this external dependency impediment to unblock the team and salvage the Sprint Goal, thereby protecting our PI commitment and ensuring the business unit could meet its regulatory obligations. This required navigating organizational boundaries and influencing external teams without direct authority, all while shielding my development team from excessive external noise and context switching so they could maintain focus on other potential Sprint work. I needed to facilitate a swift resolution, balancing urgency with maintaining positive cross-team relationships.
+
+# Action
+
+1.  **Immediate Triage & Information Gathering:** I first met with the team's Technical Lead (TL) to understand the precise technical requirements (source/destination IPs, ports, protocol) and confirm the blocker's impact. We verified no workaround existed. I then confirmed with the Product Owner (PO) the absolute criticality of this specific API connection for the Sprint Goal and the downstream regulatory deadline, gathering quantifiable business impact details.
+2.  **Shielding the Team:** In the Daily Scrum, I transparently communicated the situation and assured the team I was taking point on resolving the firewall issue. I encouraged them, in consultation with the TL, to pivot temporarily to other valuable Sprint Backlog items, such as enhancing unit test coverage for already completed code or tackling a smaller, independent story, to maintain momentum without thrashing.
+3.  **Investigating the Delay:** I located the original JIRA request submitted to the Network Security team. It was correctly filed but sitting in their standard queue with a multi-week SLA, clearly insufficient for our Sprint timeline.
+4.  **Targeted Engagement (Influence without Authority):** I identified the Manager of the Network Security team. Instead of escalating immediately or making demands, I scheduled a brief call.
+    *   I started by acknowledging their team's workload and established processes, showing empathy.
+    *   I clearly articulated the *business context* – the specific MiFID II requirement, the imminent regulatory deadline, and the direct impact this single firewall rule had on the firm meeting its compliance obligations (using the impact details provided by the PO).
+    *   I presented the precise technical requirements concisely (prepared with the TL).
+    *   Crucially, I framed it collaboratively: "We have an urgent regulatory deadline dependent on this connection. What information do you need from us to help expedite this specific request within your process?" I explicitly asked for *his* guidance on navigating their system effectively for this critical item.
+5.  **Facilitating Direct Connection:** The Network Security Manager appreciated the context and directness. He identified the assigned engineer. I immediately facilitated a short, focused call between our TL and their engineer to iron out any technical ambiguities, preventing potential delays from email exchanges. I participated primarily as a facilitator, ensuring clarity and capturing actions.
+6.  **Persistent, Respectful Follow-up:** I maintained regular, brief check-ins with the Network Security Manager, providing updates on our end and inquiring about progress, always reinforcing the business criticality without being demanding. I kept my PO and TL informed asynchronously to minimize meeting overhead for them.
+
+# Result
+
+This servant leadership approach, focused on clear communication of business impact, collaboration, and influencing without authority, yielded significant results:
+
+1.  **Impediment Resolved Quickly:** The Network Security Manager, understanding the regulatory imperative, personally intervened to prioritize our request. The firewall rule change was implemented within 36 hours, drastically faster than the standard SLA.
+2.  **Sprint Goal Achieved:** The team was unblocked quickly. While they lost about a day on the primary task, their ability to pivot effectively meant overall Sprint velocity wasn't significantly impacted. They successfully integrated with the external API and completed the core functionality, meeting the Sprint Goal.
+3.  **PI Objective On Track:** Meeting the Sprint Goal ensured the larger PI objective for the MiFID II reporting capability remained on schedule, mitigating risk to the regulatory deadline.
+4.  **Team Focus Protected:** The development team was shielded from the cross-departmental chasing and lengthy meetings, allowing them to remain largely focused on development tasks.
+5.  **Strengthened Relationships:** My collaborative and respectful approach, rather than premature escalation, strengthened the relationship with the Network Security team. This led to improved communication channels and an agreement for earlier engagement regarding dependencies in subsequent PI Planning sessions.
+6.  **Process Improvement:** We incorporated a specific check for external infrastructure dependencies (like firewall rules) with confirmed timelines into our team's Definition of Ready for future features, making our planning more robust.

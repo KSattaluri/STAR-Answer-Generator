@@ -1,0 +1,114 @@
+# STAR Answer Generation System Configuration
+
+# --- General Settings ---
+project_name: "STAR Answer Generation System"
+version: "1.0.0"
+
+# --- LLM API Settings ---
+max_retries: 3              # Max retries for API errors/timeouts/JSON issues
+retry_initial_backoff_seconds: 2
+request_timeout_seconds: 120
+
+# --- Output Settings ---
+output_base_dir: "generated_answers"
+subprompts_dir: "sub_prompts"
+star_answers_dir: "star_answers"
+conversations_dir: "conversations"
+step2_cache_filename: "step2_sub_prompts.json"
+step3_answer_prefix: "answer_"
+step3_answer_suffix: ".md"
+
+# --- Paths to Prompt Templates ---
+meta_prompt_path: "prompt_templates/stage1_subprompt_generator.md"
+main_context_prompt_path: "prompt_templates/stage2_star_answer_generator.md"
+conversation_prompt_path: "prompt_templates/stage3_conversational_transformer.md"
+
+# --- Token Limits ---
+step1_max_tokens: 4000      # Tokens for generating JSON sub-prompts (Step 1)
+step2_max_tokens: 8000      # Tokens for generating individual STAR answers (Step 2)
+step3_max_tokens: 4000      # Tokens for generating conversational answers (Step 3)
+
+# --- Primary API Settings (Gemini) ---
+gemini_api_key_env_var: "GEMINI_API_KEY"  # Name of environment variable containing the API key
+gemini_model: "gemini-2.5-pro-exp-03-25"  # Model from test_gemini_connection.py
+use_async_client: true                    # Use client.aio.chats.create() instead of non-async version
+
+# --- Secondary API Settings (Claude) ---
+use_secondary_fallback: true              # Enable/disable the fallback mechanism
+claude_api_key_env_var: "ANTHROPIC_API_KEY"  # Name of environment variable containing the Claude API key
+claude_model: "claude-3-7-sonnet-20250219"  # Confirmed working model
+secondary_max_retries: 2                  # Max retries for the secondary LLM (can be different from primary)
+secondary_api_delay_seconds: 3            # Delay between secondary LLM API calls (can be different)
+
+# --- Industry Settings ---
+industry_distribution: "cycle"  # How to distribute industries: "cycle", "random", or "balanced"
+
+# Industry mappings with abbreviations for consistent file naming
+industry_mappings:
+  "Finance / Financial Services":
+    abbreviation: "FIN"
+  "Healthcare / Insurance":
+    abbreviation: "HLTH"
+  "Retail / E-commerce":
+    abbreviation: "RTL"
+
+# List of target industries (must match keys in industry_mappings)
+target_industries:
+  - "Finance / Financial Services"
+  - "Healthcare / Insurance"
+  - "Retail / E-commerce"
+
+# --- Role and Skills File Mappings ---
+# This mapping defines both the abbreviation and the skills file path for each role
+# Used across all stages of the pipeline for consistent role identification and skills loading
+role_mappings:
+  "Technical Delivery Manager":
+    abbreviation: "TDM"
+    skills_file: "prompt_templates/role_skills/TDM-Skills.md"
+  "Product Owner":
+    abbreviation: "PO"
+    skills_file: "prompt_templates/role_skills/PO-Skills.md"
+  "Scrum Master":
+    abbreviation: "SM"
+    skills_file: "prompt_templates/role_skills/SM-Skills.md"
+  "Product Manager":
+    abbreviation: "PdM"  # Changed from PM to PdM to match the actual file
+    skills_file: "prompt_templates/role_skills/PdM-Skills.md"
+  "Business Analyst":
+    abbreviation: "BA"
+    skills_file: "prompt_templates/role_skills/BA-Skills.md"
+  "Project Manager":
+    abbreviation: "PrM"
+    skills_file: "prompt_templates/role_skills/PrM-Skills.md"
+  "Development Team Lead":
+    abbreviation: "DTL"
+    skills_file: "prompt_templates/role_skills/DTL-Skills.md"
+
+# --- Target Roles and Questions ---
+num_answers_per_question: 1  # Number of STAR answers to generate per question
+
+target_roles:
+  - name: "Technical Delivery Manager"
+    interview_questions:
+      Q1: "Describe a situation where you had to manage a complex project with multiple stakeholders."
+      # To add more questions, simply add more key-value pairs with unique question IDs
+      # Q2: "Tell me about a time when you had to resolve a conflict between team members."
+      # Q3: "Describe how you've successfully implemented Agile methodologies in a traditional organization."
+  
+  - name: "Product Owner"
+    interview_questions:
+      Q1: "Describe a situation where you had to prioritize features for a product release."
+
+  - name: "Scrum Master"
+    interview_questions:
+      Q1: "Talk about a time when you helped a team overcome obstacles to deliver successfully."
+
+  - name: "Product Manager"
+    interview_questions:
+      Q1: "Describe a situation where you had to make data-driven decisions to improve a product."
+
+# --- Logging Settings ---
+log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+log_to_file: true
+log_file_path: "logs/star_generator.log"
+log_format: "%(asctime)s - %(levelname)s - %(filename)s:%(lineno)d - %(message)s"

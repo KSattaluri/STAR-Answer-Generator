@@ -1,0 +1,39 @@
+# Ignore legacy code folder
+legacy_code/
+
+# Ignore logs
+logs/
+
+# Ignore generated answers
+#generated_answers/
+
+# Ignore environment files
+.env
+
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
