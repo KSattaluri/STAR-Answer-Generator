@@ -33,8 +33,8 @@ The STAR Answer Generator is designed to help users prepare for job interviews b
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/KSattaluri/PromptEngineering_STAR_Answers.git
-   cd PromptEngineering_STAR_Answers
+   git clone https://github.com/KSattaluri/STAR-Answer-Generator.git
+   cd STAR-Answer-Generator
    ```
 
 2. Install required packages:
