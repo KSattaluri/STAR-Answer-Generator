@@ -14,6 +14,8 @@ output_base_dir: "generated_answers"
 subprompts_dir: "sub_prompts"
 star_answers_dir: "star_answers"
 conversations_dir: "conversations"
+prompt_logs_dir: "prompt_logs"  # New directory for saving full prompts
+save_full_prompts: true  # Whether to save full prompts after parameter injection
 step2_cache_filename: "step2_sub_prompts.json"
 step3_answer_prefix: "answer_"
 step3_answer_suffix: ".md"
@@ -55,8 +57,8 @@ industry_mappings:
 # List of target industries (must match keys in industry_mappings)
 target_industries:
   - "Finance / Financial Services"
-  - "Healthcare / Insurance"
-  - "Retail / E-commerce"
+  # - "Healthcare / Insurance"
+  # - "Retail / E-commerce"
 
 # --- Role and Skills File Mappings ---
 # This mapping defines both the abbreviation and the skills file path for each role
@@ -91,21 +93,20 @@ target_roles:
   - name: "Technical Delivery Manager"
     interview_questions:
       Q1: "Describe a situation where you had to manage a complex project with multiple stakeholders."
-      # To add more questions, simply add more key-value pairs with unique question IDs
       # Q2: "Tell me about a time when you had to resolve a conflict between team members."
       # Q3: "Describe how you've successfully implemented Agile methodologies in a traditional organization."
   
-  - name: "Product Owner"
-    interview_questions:
-      Q1: "Describe a situation where you had to prioritize features for a product release."
+  # - name: "Product Owner"
+  #   interview_questions:
+  #     Q1: "Describe a situation where you had to prioritize features for a product release."
 
-  - name: "Scrum Master"
-    interview_questions:
-      Q1: "Talk about a time when you helped a team overcome obstacles to deliver successfully."
+  # - name: "Scrum Master"
+  #   interview_questions:
+  #     Q1: "Talk about a time when you helped a team overcome obstacles to deliver successfully."
 
-  - name: "Product Manager"
-    interview_questions:
-      Q1: "Describe a situation where you had to make data-driven decisions to improve a product."
+  # - name: "Product Manager"
+  #   interview_questions:
+  #     Q1: "Describe a situation where you had to make data-driven decisions to improve a product."
 
 # --- Logging Settings ---
 log_level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL

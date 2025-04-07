@@ -36,6 +36,7 @@ The STAR Answer Generator is designed to help users prepare for job interviews b
 - **State-of-the-Art LLM Support**: Leverages Google's Gemini 2.5 Pro (gemini-2.5-pro-exp-03-25) and Anthropic's Claude 3.7 Sonnet (claude-3-7-sonnet-20250219) models, with intelligent fallback mechanism
 - **Centralized Role Mappings**: Standardized abbreviations and skills file paths in the config
 - **Consistent File Naming**: Files named using role/industry abbreviations and question IDs
+- **Prompt Logging**: Saves full prompts after parameter injection for debugging and analysis
 
 ## Prerequisites
 
@@ -72,6 +73,7 @@ The system is configured through the `config.yaml` file in the project root. Key
 - **Industry Mappings**: Standard industry abbreviations for consistent file naming
 - **Target Roles and Questions**: Roles with interview questions in a streamlined format
 - **Prompt Templates**: Paths to prompt templates for each phase
+- **Prompt Logging Settings**: Enable/disable prompt logging and set output directory
 
 ### Common Configuration Changes
 
@@ -112,6 +114,44 @@ Output files follow a consistent naming pattern:
 Example: `tdm_q1_fin_1_star.json` for a Technical Delivery Manager's response to question 1 in Financial Services.
 
 See `config.yaml` for all available options and their descriptions.
+
+## Prompt Logging for Debugging
+
+The system includes a prompt logging feature that saves the full prompts after parameter injection. This is useful for debugging and analyzing the system's behavior.
+
+### Prompt Log Files
+
+Prompt logs are saved in the `generated_answers/prompt_logs` directory by default and follow the same naming convention as other generated files:
+
+```
+{role_abbr}_{question_id}_{industry_abbr}_{stage_name}_prompt.txt
+```
+
+Example: `tdm_q1_fin_star_answer_prompt.txt` for the prompt used to generate a Technical Delivery Manager's STAR answer to question 1 in Financial Services.
+
+### Log File Content
+
+Each prompt log file contains:
+
+- Timestamp and stage information
+- Parameters used for substitution
+- The complete prompt after parameter injection
+
+This allows you to see exactly what was sent to the LLM API, which is invaluable for troubleshooting and improving prompt templates.
+
+### Enabling/Disabling Prompt Logging
+
+Prompt logging can be enabled or disabled in the `config.yaml` file:
+
+```yaml
+# Enable logging of full prompts after parameter substitution
+save_full_prompts: true
+
+# Directory for prompt logs (relative to output.base_dir)
+prompt_logs_dir: prompt_logs
+```
+
+When cleaning up generated files with `cleanup.py --all`, prompt logs are also removed.
 
 ## Usage
 

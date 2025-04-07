@@ -6,15 +6,15 @@
     "core_interview_question": "Describe a situation where you had to manage a complex project with multiple stakeholders.",
     "llm_instructions": "Generate a single, detailed, realistic STAR-format answer based strictly on the comprehensive Main Context Prompt provided separately. Ensure the answer fully embodies the `Technical Delivery Manager (TDM)` persona, uses the `Finance / Financial Services` context, meets all requirements outlined in the Main Context Prompt, and specifically incorporates the focus points detailed in this JSON object.",
     "skill_focus": [
-      "Stakeholder Management & Organizational Influence - Cross-Functional Stakeholder Alignment",
-      "Execution & Operational Excellence - Dependency & Integration Management"
+      "Execution & Operational Excellence - Dependency & Integration Management",
+      "Stakeholder Management & Organizational Influence - Cross-Functional Stakeholder Alignment"
     ],
     "soft_skill_highlight": "Strategic Negotiation & Conflict Resolution",
-    "scenario_theme_hint": "The situation should involve leading the delivery of a critical regulatory reporting enhancement (e.g., related to CCAR or MiFID II) with a fixed deadline, requiring coordination across multiple internal technology teams (different ARTs), the business reporting unit, compliance, and potentially external auditors or consultants.",
-    "tech_context_hint": "Involve technologies like Java/Spring Boot microservices for the reporting engine, Kafka for data ingestion, integration with legacy Core Banking APIs (potentially SOAP), data sourcing from a Data Warehouse (e.g., Oracle), and deployment via CI/CD pipelines to a cloud platform like AWS or Azure.",
-    "stakeholder_interaction_hint": "Describe interactions with stakeholders such as the Head of Regulatory Reporting (Business), Compliance Officer, Release Train Engineers (RTEs) from dependent ARTs (e.g., Core Banking ART, Risk Systems ART), Enterprise Architects, and Product Managers from involved teams.",
-    "org_context_hint": "Frame this within a SAFe environment, highlighting challenges in aligning PI Objectives across ARTs, managing cross-ART dependencies identified during PI Planning, and negotiating scope/timelines due to conflicting priorities between regulatory needs and other business initiatives.",
-    "additional_considerations": "Emphasize the complexity arising from differing priorities, technical integration challenges between new and legacy systems, and the high stakes associated with meeting the regulatory deadline (e.g., risk of significant fines, reputational damage). Highlight how you facilitated trade-off discussions and achieved consensus.",
+    "scenario_theme_hint": "The situation should involve integrating a new, third-party Anti-Money Laundering (AML) system with several existing internal platforms (e.g., Core Banking, Customer Data Hub) across different Agile Release Trains (ARTs) facing technical integration challenges and conflicting priorities between internal teams and the vendor.",
+    "tech_context_hint": "Involve technologies like RESTful APIs, Kafka event streams, Java microservices on a cloud platform (e.g., AWS EKS), and interfacing with the vendor's SaaS platform.",
+    "stakeholder_interaction_hint": "Detail interactions with Product Managers from two different ARTs, the Vendor's Implementation Manager, an Enterprise Architect enforcing standards, and the Head of Financial Crime Compliance (Business Stakeholder).",
+    "org_context_hint": "Frame this within a SAFe environment, highlighting cross-ART dependencies identified during PI Planning that became more complex during execution, potentially impacting a critical regulatory compliance date.",
+    "additional_considerations": "Emphasize the complexity arising from differing technical opinions on integration patterns (e.g., vendor push vs. internal pull), data privacy concerns requiring specific handling, and the need to negotiate a phased rollout acceptable to all parties while mitigating delivery risk.",
     "final_output_instructions": "Final Output: A single, comprehensive STAR answer reflecting these specific constraints and all general requirements from the Main Context Prompt. The entire answer MUST be formatted using Markdown (headings, lists, bolding etc.)."
   }
 ]

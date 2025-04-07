@@ -27,6 +27,7 @@ def cleanup_generated_files(config, args):
     subprompts_dir = os.path.join(base_dir, config.get('subprompts_dir', 'sub_prompts'))
     star_answers_dir = os.path.join(base_dir, config.get('star_answers_dir', 'star_answers'))
     conversations_dir = os.path.join(base_dir, config.get('conversations_dir', 'conversations'))
+    prompt_logs_dir = os.path.join(base_dir, config.get('prompt_logs_dir', 'prompt_logs'))
     test_dir = os.path.join(base_dir, 'test')
     
     dirs_to_clean = []
@@ -41,9 +42,10 @@ def cleanup_generated_files(config, args):
     if args.all or args.conversational:
         dirs_to_clean.append(conversations_dir)
     
-    # Always clean the test directory if --all is specified
+    # Always clean the test directory and prompt logs if --all is specified
     if args.all:
         dirs_to_clean.append(test_dir)
+        dirs_to_clean.append(prompt_logs_dir)
     
     # Clean each directory
     for directory in dirs_to_clean:

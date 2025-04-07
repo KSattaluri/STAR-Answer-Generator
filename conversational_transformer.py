@@ -319,8 +319,11 @@ def generate_conversation(
     # Generate parameters for this STAR answer
     params = generate_conversational_parameters(star_answer)
     
-    # Generate the prompt by substituting parameters
-    prompt = substitute_parameters(template, params)
+    # Add STAR_ANSWER_FILE parameter explicitly to help with prompt logging
+    params['STAR_ANSWER_FILE'] = os.path.basename(star_answer_path)
+    
+    # Generate the prompt by substituting parameters with config for logging
+    prompt = substitute_parameters(template, params, stage_name='conversational', config=config)
     
     # Call the LLM to generate the conversational response
     try:

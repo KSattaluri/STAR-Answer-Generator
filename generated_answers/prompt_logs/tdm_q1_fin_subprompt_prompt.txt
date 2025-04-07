@@ -1,0 +1,206 @@
+===== PROMPT METADATA =====
+Stage: subprompt
+Timestamp: 20250407_000222
+
+===== PARAMETERS =====
+TARGET_ROLE: Technical Delivery Manager (TDM)
+TARGET_INDUSTRY: Finance / Financial Services
+CORE_INTERVIEW_QUESTION: Describe a situation where you had to manage a complex project with multiple stakeholders.
+
+===== FULL PROMPT =====
+## Core Parameters (Edit These Values As Needed)
+* **NUM_PROMPTS_TO_GENERATE:** 1
+* **TARGET_ROLE:** Technical Delivery Manager (TDM)
+* **TARGET_INDUSTRY:** Finance / Financial Services
+* **CORE_INTERVIEW_QUESTION:** Describe a situation where you had to manage a complex project with multiple stakeholders.
+
+**ROLE:** You are a Prompt Engineering Assistant.
+
+**CONTEXT:**
+You will be provided with a detailed **Main Context Prompt** (following this meta-prompt, separated by '---'). This Main Context Prompt provides the comprehensive definition, skills, background, technical details, constraints, and examples associated with the `Technical Delivery Manager (TDM)` persona operating within the `Finance / Financial Services` defined above.
+
+**ROLE-SPECIFIC SKILLS:**
+# Technical Delivery Manager
+
+## **1\. Strategic Delivery Leadership**
+
+* **Business-Technology Alignment**  
+  * Translating business strategies into executable technical delivery plans  
+  * Quantifying business value and ROI of technical initiatives  
+  * Ensuring technical solutions meet business objectives and market needs  
+* **Delivery Methodology Expertise**  
+  * Selecting and tailoring methodologies (Agile, Waterfall, Hybrid) based on project context  
+  * Implementing scaled frameworks (SAFe, LeSS, Nexus) for enterprise initiatives  
+  * Evolving delivery approaches as projects progress through different phases  
+* **Portfolio and Program Management**  
+  * Orchestrating interdependent projects and workstreams  
+  * Managing shared resources across project boundaries  
+  * Balancing tactical delivery with strategic portfolio objectives  
+* **Enterprise Architecture Collaboration**  
+  * Partnering with architects to ensure solutions align with enterprise standards  
+  * Facilitating technical decision-making within architectural guardrails  
+  * Bridging communication between business stakeholders and technical architects  
+* **Financial Management & Budgeting**  
+  * Developing and managing project budgets with accurate forecasting  
+  * Tracking and reporting on financial metrics and variance  
+  * Optimizing resource allocation for maximum ROI
+
+## **2\. Team Enablement & Talent Management**
+
+* **Cross-Functional Team Leadership**  
+  * Building cohesive teams across engineering, QA, design, and operational roles  
+  * Creating balanced team compositions with complementary skills  
+  * Facilitating self-organization while providing appropriate guidance  
+* **Engineering Excellence & Productivity**  
+  * Implementing engineering best practices and automated quality checks  
+  * Removing impediments to flow and minimizing context-switching  
+  * Optimizing development environments and tool chains  
+* **Technical Talent Development**  
+  * Creating individual growth plans aligned with project needs  
+  * Identifying skill gaps and facilitating targeted learning opportunities  
+  * Building technical leadership capabilities within the team  
+* **Psychological Safety & Innovation Culture**  
+  * Establishing environments where constructive feedback flows freely  
+  * Encouraging calculated risk-taking and learning from failure  
+  * Fostering inclusive practices that value diverse perspectives  
+* **Remote & Distributed Team Management**  
+  * Implementing effective collaboration patterns for distributed teams  
+  * Creating equitable experiences for co-located and remote team members  
+  * Maintaining team cohesion across time zones and cultural boundaries
+
+## **3\. Execution & Operational Excellence**
+
+* **Adaptive Planning & Backlog Management**  
+  * Implementing rolling wave planning and progressive elaboration  
+  * Facilitating grooming sessions that balance technical and business perspectives  
+  * Managing work-in-progress limits to optimize flow  
+* **Dependency & Integration Management**  
+  * Mapping and visualizing complex dependency networks  
+  * Coordinating integration points between systems and teams  
+  * Establishing clear contracts and interfaces between components  
+* **Risk Management & Mitigation Strategies**  
+  * Implementing structured risk identification and assessment frameworks  
+  * Developing contingency plans and trigger-based escalation paths  
+  * Balancing risk mitigation with delivery momentum  
+* **Quality Engineering & Test Automation**  
+  * Implementing shift-left testing practices and quality gates  
+  * Advocating for test automation at all appropriate levels  
+  * Integrating security testing throughout the delivery lifecycle  
+* **DevOps & Continuous Delivery**  
+  * Implementing CI/CD pipelines and infrastructure-as-code  
+  * Establishing feature flagging and canary deployment strategies  
+  * Facilitating DevOps culture and practices across development and operations  
+* **Production Readiness & Operational Transition**  
+  * Ensuring robust monitoring, alerting, and observability  
+  * Establishing incident management and on-call rotation processes  
+  * Facilitating knowledge transfer to support and operations teams  
+* **Data-Informed Decision Making**  
+  * Implementing relevant delivery and technical health metrics  
+  * Creating actionable dashboards for different stakeholder needs  
+  * Using predictive analytics to forecast delivery outcomes  
+* **Technical Debt & Sustainability Planning**  
+  * Quantifying and visualizing technical debt impacts  
+  * Balancing feature development with maintainability investments  
+  * Creating sustainable technical practices that minimize future debt
+
+## **4\. Stakeholder Management & Organizational Influence**
+
+* **Executive Stakeholder Management**  
+  * Translating technical concepts for C-level understanding  
+  * Presenting delivery status with appropriate level of detail  
+  * Negotiating for resources and priority at executive level  
+* **Cross-Functional Stakeholder Alignment**  
+  * Mapping stakeholder influence, interest, and impact  
+  * Tailoring communication approaches to different stakeholder groups  
+  * Facilitating cross-functional prioritization and trade-off decisions  
+* **Transparent Communication & Information Radiators**  
+  * Implementing information radiators for real-time status visibility  
+  * Creating accessible documentation and knowledge sharing practices  
+  * Establishing communication cadences for different audience needs  
+* **Strategic Negotiation & Conflict Resolution**  
+  * Applying principled negotiation techniques in resource discussions  
+  * Mediating technical disagreements with focus on business outcomes  
+  * Balancing competing priorities across organizational boundaries  
+* **Change Leadership & Organizational Transformation**  
+  * Leading adoption of new delivery practices across the organization  
+  * Facilitating cultural changes that support modern engineering approaches  
+  * Serving as a change agent for continuous improvement
+
+## **5\. Adaptive Mindset & Professional Excellence**
+
+* **Systems Thinking & Complex Problem Solving**  
+  * Mapping interdependencies and feedback loops in complex systems  
+  * Addressing root causes rather than symptoms  
+  * Anticipating second and third-order effects of decisions  
+* **Analytical & Data-Driven Decision Making**  
+  * Applying appropriate analytical frameworks to delivery challenges  
+  * Making evidence-based decisions while acknowledging uncertainty  
+  * Balancing quantitative metrics with qualitative insights  
+* **Adaptability & Change Resilience**  
+  * Maintaining effectiveness during periods of significant change  
+  * Helping teams navigate ambiguity and shifting requirements  
+  * Adjusting approaches based on emerging information  
+* **Continuous Learning & Knowledge Sharing**  
+  * Staying current on emerging delivery methodologies and tools  
+  * Establishing knowledge management systems and practices  
+  * Contributing to the broader delivery management community  
+* **Emotional Intelligence & Leadership Presence**  
+  * Demonstrating self-awareness and emotional regulation  
+  * Reading team dynamics and addressing interpersonal challenges  
+  * Maintaining composure and clarity during high-pressure situations  
+* **Ethical Decision Making & Sustainable Practices**  
+  * Making decisions that consider long-term impact and sustainability  
+  * Upholding ethical standards in team management and vendor relationships  
+  * Advocating for responsible technology practices  
+* **Strategic Business Acumen**  
+  * Understanding industry trends and competitive dynamics  
+  * Connecting delivery practices to business metrics and outcomes  
+  * Identifying opportunities to leverage technology for competitive advantage
+
+**OBJECTIVE:**
+Generate a JSON array containing **1** unique JSON objects. Each object represents a distinct sub-prompt designed to instruct a subsequent LLM instance to create *one* specific STAR-format answer to the interview question: **Describe a situation where you had to manage a complex project with multiple stakeholders.** 
+
+
+**INSTRUCTIONS FOR GENERATING EACH SUB-PROMPT JSON OBJECT:**
+
+1.  **Reference the Main Context Prompt:** The instructions within each generated JSON object must direct the target LLM to base its answer *strictly on the definitions, rules, persona details, skills list, and constraints* outlined in the accompanying **Main Context Prompt**. This includes fully embodying the `Technical Delivery Manager (TDM)` persona and utilizing the `Finance / Financial Services` context as detailed within that document.
+2.  **Ensure Uniqueness:** Each of the **1** JSON objects you generate must represent a distinct scenario. Achieve this by specifying a *unique combination* of values for the following keys within each JSON object, drawing details and examples from the Main Context Prompt:
+    * `prompt_id`: A unique identifier derived from role and scenario (e.g., "[TARGET_ROLE_ABBR]_scenario_1", "[TARGET_ROLE_ABBR]_scenario_2").
+    * `prompt_number`: The sequential number (e.g., 1, 2).
+    * `total_prompts`: The value of `1`.
+    * `core_interview_question`: "Describe a situation where you had to manage a complex project with multiple stakeholders."
+    * `skill_focus`: An array of 1-2 specific sub-skills from the `Technical Delivery Manager (TDM) Skill Domains` list (e.g., `["Risk Management & Mitigation Strategies", "Dependency & Integration Management"]`). *Vary this selection.*
+    * `soft_skill_highlight`: A single primary soft skill to showcase (e.g., "Proactive Problem-Solving and Ownership"). *Cycle through different soft skills.*
+    * `scenario_theme_hint`: A string suggesting the *type* of "above and beyond" situation relevant to `Technical Delivery Manager (TDM)` and `Finance / Financial Services`. *Use diverse themes.*
+    * `tech_context_hint`: A string suggesting relevant technologies from the Main Context Prompt. *Vary the technology focus.*
+    * `stakeholder_interaction_hint`: A string suggesting key stakeholder interactions using titles from the Main Context Prompt. *Vary the stakeholders.*
+    * `org_context_hint`: A string briefly grounding the scenario using organizational or SAFe examples from the Main Context Prompt. *Vary the context.*
+    * `additional_considerations` (Optional): A string providing any extra nuances or points for the LLM to consider for this specific scenario.
+    * `llm_instructions`: A string containing the core instructions for the LLM that will generate the final STAR answer. This must emphasize adherence to the Main Context Prompt and the specific focus points defined in this JSON object.
+    * `final_output_instructions`: A string specifying the required final output format, explicitly stating it must be a **single, comprehensive STAR answer formatted entirely using Markdown** (including headings, lists, bolding etc. for readability).
+3.  **JSON Output Format:** The final output of *this* meta-prompt execution MUST be a single JSON array containing the **1** generated sub-prompt objects. Do not include any introductory text or explanations outside the JSON structure itself in the final output.
+
+**EXAMPLE STRUCTURE FOR ONE JSON OBJECT WITHIN THE OUTPUT ARRAY:**
+
+```json
+{
+  "prompt_id": "[TARGET_ROLE_ABBR]_scenario_1",
+  "prompt_number": 1,
+  "total_prompts": "1",
+  "core_interview_question": "Talk about a time when you went above and beyond your role to accomplish a goal.",
+  "llm_instructions": "Generate a single, detailed, realistic STAR-format answer based strictly on the comprehensive Main Context Prompt provided separately. Ensure the answer fully embodies the `Technical Delivery Manager (TDM)` persona, uses the `Finance / Financial Services` context, meets all requirements outlined in the Main Context Prompt, and specifically incorporates the focus points detailed in this JSON object.",
+  "skill_focus": ["Execution & Operational Excellence - Risk Management & Mitigation Strategies", "Execution & Operational Excellence - Dependency & Integration Management"],
+  "soft_skill_highlight": "Proactive Problem-Solving and Ownership",
+  "scenario_theme_hint": "The situation should involve identifying a critical integration risk between your team/ART and an external vendor system that wasn't formally tracked, requiring you (as the `Technical Delivery Manager (TDM)`) to step outside direct responsibilities to drive resolution before it derailed a key objective relevant to the `Finance / Financial Services`.",
+  "tech_context_hint": "Use technologies like RESTful APIs, Java/Spring Boot, Kafka, and AWS.",
+  "stakeholder_interaction_hint": "Detail interactions with your Product Manager, the Vendor's Technical Lead, and potentially a Program Manager.",
+  "org_context_hint": "Frame this within a regular PI execution cycle.",
+  "additional_considerations": "Emphasize the urgency and potential financial/reputational impact if the risk wasn't addressed proactively.",
+  "final_output_instructions": "Final Output: A single, comprehensive STAR answer reflecting these specific constraints and all general requirements from the Main Context Prompt. The entire answer MUST be formatted using Markdown (headings, lists, bolding etc.)."
+}
+
+TASK:
+Generate the final output as a single JSON array containing 1 unique JSON objects, each structured according to the example above and following all instructions. Ensure the content within each object is varied and adheres to the details specified in the accompanying Main Context Prompt. Output ONLY the JSON array.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------
