@@ -5,12 +5,12 @@
 ### Basic Functionality Testing
 - [X] Test single role, multiple prompts, multiple questions configuration
 - [ ] Test multiple roles, multiple questions, multiple prompts configuration
-- [ ] Verify resume functionality works correctly with the new naming scheme
+- [X] Verify resume functionality works correctly with the new naming scheme
 - [ ] Validate that industry contextualization works properly across different roles
 
 ### Prompt Content Validation
 - [X] Implement logging of full prompts after parameter injection for each stage
-- [ ] Add option to save complete prompts to files for manual review
+- [X] Add option to save complete prompts to files for manual review
 - [ ] Review sub-prompt content coherence for each role/industry combination
 - [ ] Ensure STAR answer generator receives appropriate context from sub-prompts
 - [ ] Validate conversational transformer correctly references STAR answer content
@@ -24,8 +24,8 @@
 ## Enhancement Ideas
 
 ### Logging Improvements
-- [ ] Add verbose logging option to capture complete prompts for each stage
-- [ ] Create debug mode that saves intermediate prompts to files
+- [X] Add verbose logging option to capture complete prompts for each stage
+- [X] Create debug mode that saves intermediate prompts to files
 - [ ] Implement a prompt validation step to check for parameter substitution issues
 
 ### Configuration Refinements
@@ -40,7 +40,7 @@
 - [ ] Implement a prompt quality scoring mechanism
 
 ## Documentation
-- [ ] Add examples of output files for each stage
+- [X] Add examples of output files for each stage
 - [ ] Include sample configurations for different use cases
-- [ ] Create troubleshooting guide for common prompt issues
+- [X] Create troubleshooting guide for common prompt issues
 - [ ] Document best practices for creating effective role skills files

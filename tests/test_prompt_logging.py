@@ -1,8 +1,22 @@
 """
 Test script for prompt logging functionality
 
-This script tests the prompt logging functionality we implemented in prompt_processor.py
-by directly calling the functions with the proper parameters.
+This script tests the prompt logging functionality implemented in prompt_processor.py
+by directly calling the various prompt functions with test parameters. The script verifies that:
+
+1. Prompt logs are correctly generated with the specified naming convention
+2. Log files contain the expected content (parameters, timestamp, and full prompt)
+3. Logs are saved to the configured directory
+
+Usage:
+    python -m tests.test_prompt_logging
+
+Requirements:
+    - config.yaml with save_full_prompts set to true
+    - Valid prompt templates in the locations specified in config.yaml
+    
+The test creates sample logs in the prompt_logs directory configured in config.yaml.
+These logs can be manually inspected or automatically cleaned up using cleanup.py.
 """
 
 import os
